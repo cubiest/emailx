@@ -31,6 +31,7 @@ func TestValidate(t *testing.T) {
 
 		// Valid.
 		{in: "email@gmail.com"},
+		{in: "email@example.com"},
 		{in: "email.email@gmail.com"},
 		{in: "email+extra@example.com"},
 		{in: "EMAIL@aol.co.uk"},
