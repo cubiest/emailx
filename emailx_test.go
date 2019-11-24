@@ -15,15 +15,15 @@ func TestValidate(t *testing.T) {
 		{in: "", err: true},
 		{in: "email@", err: true},
 		{in: "email@x", err: true},
-		{in: "email@@example.com", err: true},
-		{in: ".email@example.com", err: true},
-		{in: "email.@example.com", err: true},
-		{in: "email..test@example.com", err: true},
-		{in: ".email..test.@example.com", err: true},
-		{in: "email@at@example.com", err: true},
-		{in: "some whitespace@example.com", err: true},
-		{in: "email@whitespace example.com", err: true},
-		{in: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com", err: true},
+		{in: "email@@gmail.com", err: true},
+		{in: ".email@gmail.com", err: true},
+		{in: "email.@gmail.com", err: true},
+		{in: "email..test@gmail.com", err: true},
+		{in: ".email..test.@gmail.com", err: true},
+		{in: "email@at@gmail.com", err: true},
+		{in: "some whitespace@gmail.com", err: true},
+		{in: "email@whitespace gmail.com", err: true},
+		{in: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com", err: true},
 		{in: "email@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com", err: true},
 
 		// Unresolvable domain.
@@ -31,9 +31,9 @@ func TestValidate(t *testing.T) {
 
 		// Valid.
 		{in: "email@gmail.com"},
-		{in: "email@example.com"},
+		{in: "email@yahoo.com"},
 		{in: "email.email@gmail.com"},
-		{in: "email+extra@example.com"},
+		{in: "email+extra@yahoo.com"},
 		{in: "EMAIL@aol.co.uk"},
 		{in: "EMAIL+EXTRA@aol.co.uk"},
 	}
