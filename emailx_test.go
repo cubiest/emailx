@@ -29,6 +29,10 @@ func TestValidate(t *testing.T) {
 		// Unresolvable domain.
 		{in: "email+extra@wrong.example.com", err: true},
 
+		// Blocked range.
+		{in: "email@10.0.0.1.xip.io", err: true},
+		{in: "email@127.0.0.1.xip.io", err: true},
+
 		// Valid.
 		{in: "email@gmail.com"},
 		{in: "email@yahoo.com"},
